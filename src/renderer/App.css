@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+
+:root {
+	--bg: #17161b;
+	--tabWidth: 8vw;
+	--tabHeight: 6vh;
+}
+
+body {
+	position: relative;
+	color: white;
+	height: 100vh;
+	background: var(--bg);
+	font-family: 'DM Sans', sans-serif;
+	overflow-y: hidden;
+	display: flex;
+	margin: 0;
+	width: 100vw;
+	padding: 0;
+}
+
+button:focus-visible {
+	border: none;
+	outline: none;
+}
+
+button {
+	background: none;
+	padding: 10px 20px;
+	border-radius: 10px;
+	border: none;
+	appearance: none;
+	font-size: 1.3rem;
+	transition: all ease-in 0.1s;
+	cursor: pointer;
+	color: #fff;
+	opacity: 0.5;
+}
+
+button:hover {
+	transform: scale(1.05);
+	opacity: 1;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	height: fit-content;
+	width: fit-content;
+	margin: 10px;
+}
+
+a:hover {
+	opacity: 1;
+	text-decoration: none;
+}
+
+.navbar {
+	width: 100vw;
+	height: var(--tabHeight);
+	background: #242528;
+	display: flex;
+}
+
+.addressBar {
+	margin-top: 0.4%;
+	margin-left: 10vw;
+	flex: 0.7;
+	display: flex;
+	padding: 5px;
+	flex-direction: row;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 16px;
+	transition: all ease-in 0.1s;
+	height: 20px;
+	opacity: 0.5;
+}
+
+.addressBar:hover {
+	opacity: 1;
+}
+
+.search {
+	width: 100%;
+	position: relative;
+	display: flex;
+}
+
+.searchTerm {
+	color: #fff;
+	width: 100%;
+	padding: 5px;
+	border: none;
+	background: none;
+	border-radius: 5px;
+	outline: none;
+	transition: ease-in-out 0.2s;
+}
+
+webview {
+	display: inline-flex;
+	width: 100vw;
+	border: none;
+	height: calc(100vh - (var(--tabHeight) * 2));
+}
+
+.tabGroup {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: var(--tabHeight);
+
+	button {
+		background: none;
+		color: #fff;
+	}
+}
+
+.tab {
+	background-color: #2d2e33;
+	width: var(--tabWidth);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	transition: all ease-in 0.1s;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.tab:hover {
+	background-color: #1c1c1f;
+}
+
+.activeTab {
+	background-color: #242528;
+	width: var(--tabWidth);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	transition: all ease-in 0.1s;
+	padding: 5px;
+	cursor: pointer;
+}
+
+@keyframes rotate {
+	50% {
+		rotate: 180deg;
+	}
+	100% {
+		rotate: 360deg;
+	}
+}
